@@ -38,7 +38,7 @@ namespace Yapmaxxing
                 //Some words are cut short because we can use them as wildcards for variations
                 //("chuckl" can match to chuckle, chuckling, AND chuckled)
                 string[] greetingKeywords = ["hi", "hello", "greetings", "salutations", "hewwo", "hallo", "aloha"];
-                string[] goodbyeKeywords = ["bye", "byebye", "adios", "sayonara", "adieu"];
+                string[] goodbyeKeywords = ["goodbye", "bye", "byebye", "adios", "sayonara", "adieu"];
                 string[] laughKeywords = ["lol", "lmao", "lmfao", "haha", "hehe"];
                 string[] hurtKeywords = ["oof", "ow", "oww", "ouch", "owwie", "ouchie", "ouchies"];
 
