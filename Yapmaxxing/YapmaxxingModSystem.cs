@@ -38,8 +38,8 @@ namespace Yapmaxxing
                 //Some words are cut short because we can use them as wildcards for variations
                 //("chuckl" can match to chuckle, chuckling, AND chuckled)
                 string[] greetingKeywords = ["hi", "hello", "greetings", "salutations", "hewwo", "hallo", "aloha"];
-                string[] goodbyeKeywords = ["bye", "adios", "sayonara", "adieu"];
-                string[] laughKeywords = ["lol", "lmao", "lmfao", "ha"];
+                string[] goodbyeKeywords = ["bye", "byebye", "adios", "sayonara", "adieu"];
+                string[] laughKeywords = ["lol", "lmao", "lmfao", "haha", "hehe"];
                 string[] hurtKeywords = ["oof", "ow", "oww", "ouch", "owwie", "ouchie", "ouchies"];
 
                 //Split the message into its individual words
@@ -53,7 +53,7 @@ namespace Yapmaxxing
                     string word = _word.ToLower();
                     foreach (string keyword in greetingKeywords)
                     {
-                        if (word.Contains(keyword))
+                        if (word == keyword)
                         {
                             byPlayer.Entity.talkUtil.Talk(EnumTalkType.Meet);
                             return;
@@ -61,7 +61,7 @@ namespace Yapmaxxing
                     }
                     foreach (string keyword in goodbyeKeywords)
                     {
-                        if (word.Contains(keyword))
+                        if (word == keyword)
                         {
                             byPlayer.Entity.talkUtil.Talk(EnumTalkType.Goodbye);
                             return;
@@ -69,7 +69,7 @@ namespace Yapmaxxing
                     }
                     foreach (string keyword in laughKeywords)
                     {
-                        if (word.Contains(keyword))
+                        if (word == keyword)
                         {
                             byPlayer.Entity.talkUtil.Talk(EnumTalkType.Laugh);
                             return;
